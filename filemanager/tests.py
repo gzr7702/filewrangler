@@ -23,7 +23,6 @@ class HomePageTest(TestCase):
         response = home_page(request)
         self.assertTrue(response.content.startswith(b'<html>'))
         expected_html = render_to_string('home.html')
-        print("expected ", expected_html)
         self.assertEqual(response.content.decode(), expected_html)
 """
 
